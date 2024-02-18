@@ -1,4 +1,4 @@
-package org.example.websocket.chat.domain;
+package org.example.websocket.chat;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

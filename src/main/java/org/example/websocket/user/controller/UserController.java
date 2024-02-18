@@ -14,11 +14,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 @Controller
 public class UserController {
+
     private final UserService userService;
 
     // save user or adding user
     @MessageMapping("/user.addUser")
-    @SendTo("/user/topic")
+    @SendTo("/user/public")
     public User addUser(@Payload User user) {
         userService.saveUser(user);
         return user;
@@ -26,7 +27,7 @@ public class UserController {
 
     // disconnecting user
     @MessageMapping("/user.disconnectUser")
-    @SendTo("/user/topic")
+    @SendTo("/user/public")
     public User disconnectUser(@Payload User user) {
         userService.disconnect(user);
         return user;

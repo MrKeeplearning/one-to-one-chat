@@ -3,7 +3,7 @@ package org.example.websocket.chat.controller;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.example.websocket.chat.domain.ChatMessage;
-import org.example.websocket.chat.domain.ChatNotification;
+import org.example.websocket.chat.ChatNotification;
 import org.example.websocket.chat.service.ChatMessageService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
